@@ -28,7 +28,7 @@ jobs:
         uses: docker/metadata-action@v4
         id: meta
         with:
-          images: quay.io/jarno2612/alm-workshop
+          images: ${{ env.CONTAINER_REPOSITORY }}/${{ env.CONTAINER_IMAGE }}:${{ github.event.release.tag_name }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
