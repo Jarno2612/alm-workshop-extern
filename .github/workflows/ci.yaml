@@ -6,7 +6,7 @@ on:
       - released
 
 env:
-  CONTAINER_REPOSITORY: quay.io/jarno2612 # PUT YOUR OWN USERNAME HERE
+  CONTAINER_REPOSITORY: quay.io/${{ github.repository_owner } # PUT YOUR OWN USERNAME HERE
   CONTAINER_IMAGE: alm-workshop
   GOLANG_VERSION: 1.23
 
@@ -21,8 +21,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: quay.io
-          username: jarno2612+almworkshop
-          password: RILVTPZ4HXHF52YAB8OWN1LM3ER0M5SG8JNWO2KDLOKSTRR5GY2KI9KA77I804O2
+          username: ${{ github.repository_owner }} #jarno2612+almworkshop
+          password: ${{ secrets.QUAY_PASSWORD }} #RILVTPZ4HXHF52YAB8OWN1LM3ER0M5SG8JNWO2KDLOKSTRR5GY2KI9KA77I804O2
 
       - name: Extract metadata (tags, labels) for Docker
         uses: docker/metadata-action@v4
