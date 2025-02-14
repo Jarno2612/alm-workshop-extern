@@ -51,7 +51,7 @@ Before starting, follow these steps:
       ![VSCode Transmission Tower](docs/vscode-portforward.png)
 
     * Visit the `/workshop` endpoint to check if it works.
-      * You can also share your links that GitHub codespaces generate when you're running your application, but by default the connection is set to private! 
+      * You can also share your links that GitHub codespaces generate when you're running your application, but by default the connection is set to private!
       * You can change the visibilty in the same ports tab as before as you can see in the image.
 
       ![Change port visibility](docs/vscode-port-visiblity.png)
@@ -113,9 +113,9 @@ We'll deploy our container to **RedHat OpenShift Sandbox**.
 1. Log in to [OpenShift Sandbox](https://console.redhat.com/openshift/sandbox).
 2. Press "Getting started"
 3. You should be able to launch OpenShift
-   
+
    ![OpenShift Launch](docs/redhat-start-page.png)
-   
+
 4. Go to the **Developer menu → +Add → Container Images** option.
 5. Deploy your Quay.io container image by using the image registry URL.
    * Runtime icon = Golang
@@ -123,7 +123,7 @@ We'll deploy our container to **RedHat OpenShift Sandbox**.
    * Rest should be OK by default
 6. Verify deployment via **Topology View** and try to access the remote endpoint.
    * Click the little arrow icon above your application to open the route.
-   
+
    ![OpenShift Route](docs/openshift-topology-open-route.png)
 
 ---
@@ -144,7 +144,7 @@ We'll use **Infrastructure as Code (IaC)** to automate OpenShift deployments.
 3. Read the openshift.yaml to understand the Kubernetes resources and what they do.
 4. Modify `openshift.yaml` to use your Quay.io image.
 5. Login to the cluster from a CLI by copying the **Login Command**
-   
+
     ![OpenShift Login command](docs/openshift-login-command.png)
 
 6. You should now be able to do several commands using the OpenShift CLI:
