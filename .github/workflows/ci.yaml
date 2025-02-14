@@ -6,7 +6,7 @@ on:
       - released
 
 env:
-  CONTAINER_REPOSITORY: quay.io/${{ github.repository_owner } # PUT YOUR OWN USERNAME HERE
+  CONTAINER_REPOSITORY: quay.io/${{ github.repository_owner }} # PUT YOUR OWN USERNAME HERE
   CONTAINER_IMAGE: alm-workshop
   GOLANG_VERSION: 1.23
 
